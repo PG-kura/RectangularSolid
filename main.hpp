@@ -45,7 +45,7 @@ public:
 		return pos_ + size_;
 	}
 
-	T_pos  pos_;
+	T_pos    pos_;
 	T_length size_;
 };
 
