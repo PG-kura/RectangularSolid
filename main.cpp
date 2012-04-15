@@ -10,7 +10,7 @@ C make_C( int x, int y, int z, unsigned w, unsigned h, unsigned d )
 	return C( is_nega? - p: p, length_t( w, h, d ) );
 }
 
-// c0 ‚Æ c1 ‚ª“¯ˆê‚Ìê‡‚Íd•¡
+// c0 ã¨ c1 ãŒåŒä¸€ã®å ´åˆã¯é‡è¤‡
 template < bool is_nega >
 void test1()
 {
@@ -20,7 +20,7 @@ void test1()
 	assert( is_overlapped( c0, c1 ) );
 }
 
-// c0 ‚ª c1 ‚É‹óŠÔ‚ğŠJ‚¯‚Ä“à•ï‚³‚ê‚éê‡‚Íd•¡
+// c0 ãŒ c1 ã«ç©ºé–“ã‚’é–‹ã‘ã¦å†…åŒ…ã•ã‚Œã‚‹å ´åˆã¯é‡è¤‡
 template < bool is_nega >
 void test2()
 {
@@ -30,7 +30,7 @@ void test2()
 	assert( is_overlapped( c0, c1 ) );
 }
 
-// c0 ‚ª c1 ‚Ìn“_‘¤‚É“àÚ‚·‚éê‡‚Íd•¡
+// c0 ãŒ c1 ã®å§‹ç‚¹å´ã«å†…æ¥ã™ã‚‹å ´åˆã¯é‡è¤‡
 template < bool is_nega >
 void test3()
 {
@@ -40,7 +40,7 @@ void test3()
 	assert( is_overlapped( c0, c1 ) );
 }
 
-// c0 ‚ª c1 ‚ÌI“_‘¤‚É“àÚ‚·‚éê‡‚Íd•¡
+// c0 ãŒ c1 ã®çµ‚ç‚¹å´ã«å†…æ¥ã™ã‚‹å ´åˆã¯é‡è¤‡
 template < bool is_nega >
 void test4()
 {
@@ -50,7 +50,7 @@ void test4()
 	assert( is_overlapped( c0, c1 ) );
 }
 
-// c0 ‚Æ c1 ‚ª x, y, z ‚»‚ê‚¼‚ê‚ÅŒğ‚í‚Á‚Ä‚¢‚éê‡‚Íd•¡
+// c0 ã¨ c1 ãŒ x, y, z ãã‚Œãã‚Œã§äº¤ã‚ã£ã¦ã„ã‚‹å ´åˆã¯é‡è¤‡
 template < bool is_nega >
 void test5()
 {
@@ -60,7 +60,7 @@ void test5()
 	assert( is_overlapped( c0, c1 ) );
 }
 
-// c0 ‚Æ c1 ‚ª x ‚¾‚¯‚ÅŒğ‚í‚Á‚Ä‚¢‚éê‡‚Íd•¡‚Æ‚İ‚È‚³‚È‚¢B
+// c0 ã¨ c1 ãŒ x ã ã‘ã§äº¤ã‚ã£ã¦ã„ã‚‹å ´åˆã¯é‡è¤‡ã¨ã¿ãªã•ãªã„ã€‚
 template < bool is_nega >
 void test6()
 {
@@ -70,7 +70,7 @@ void test6()
 	assert( ! is_overlapped( c0, c1 ) );
 }
 
-// c0 ‚Æ c1 ‚ª y ‚¾‚¯‚ÅŒğ‚í‚Á‚Ä‚¢‚éê‡‚Íd•¡‚Æ‚İ‚È‚³‚È‚¢B
+// c0 ã¨ c1 ãŒ y ã ã‘ã§äº¤ã‚ã£ã¦ã„ã‚‹å ´åˆã¯é‡è¤‡ã¨ã¿ãªã•ãªã„ã€‚
 template < bool is_nega >
 void test7()
 {
@@ -80,7 +80,7 @@ void test7()
 	assert( ! is_overlapped( c0, c1 ) );
 }
 
-// c0 ‚Æ c1 ‚ª z ‚¾‚¯‚ÅŒğ‚í‚Á‚Ä‚¢‚éê‡‚Íd•¡‚Æ‚İ‚È‚³‚È‚¢B
+// c0 ã¨ c1 ãŒ z ã ã‘ã§äº¤ã‚ã£ã¦ã„ã‚‹å ´åˆã¯é‡è¤‡ã¨ã¿ãªã•ãªã„ã€‚
 template < bool is_nega >
 void test8()
 {
@@ -105,10 +105,10 @@ void tests()
 
 int main()
 {
-	// x, y, z ‚ğ‚»‚ê‚¼‚ê‚»‚Ì‚Ü‚Üg‚Á‚ÄƒeƒXƒg
+	// x, y, z ã‚’ãã‚Œãã‚Œãã®ã¾ã¾ä½¿ã£ã¦ãƒ†ã‚¹ãƒˆ
 	tests< false >();
 
-	// x, y, z ‚ğ‚»‚ê‚¼‚ê”½“]‚³‚¹‚ÄƒeƒXƒg
+	// x, y, z ã‚’ãã‚Œãã‚Œåè»¢ã•ã›ã¦ãƒ†ã‚¹ãƒˆ
 	tests< true >();
 }
 
